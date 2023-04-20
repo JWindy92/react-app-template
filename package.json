@@ -1,30 +1,27 @@
 {
-  "name": "test_app",
-  "version": "1.0.0",
-  "private": true,
-  "dependencies": {
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
-    "react-router-dom": "^6.10.0",
-    "react-scripts": "5.0.1"
-  },
-  "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
-  },
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
-  }
+    "name": "test_app",
+    "version": "1.0.0",
+    "description": "A project that contains a single page React app and a simple API server to handle login logic.",
+    "main": "index.js",
+    "scripts": {
+        "start": "concurrently \"cd client && react-scripts start\" \"cd server && npm start\"",
+        "build": "concurrently \"npm install\" \"cd client && npm install\" \"cd server && npm install\"",
+        "dev": "concurrently \"cd client && react-scripts start\" \"cd server && npm start\"",
+        "server": "cd server && yarn start",
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/your-username/my-project.git"
+    },
+    "author": "Your Name",
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/your-username/my-project/issues"
+    },
+    "homepage": "https://github.com/your-username/my-project#readme",
+    "dependencies": {
+        "concurrently": "^8.0.1",
+        "react-scripts": "^5.0.1"
+    }
 }
-
